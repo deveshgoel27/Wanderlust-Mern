@@ -66,6 +66,9 @@ const SessionOptions = {
 // app.get('/', (req, res) => {
 //     res.send('Hello World');
 // });
+app.get("/", (req, res) => {
+  res.redirect("/listings");
+});
 
 app.use(session(SessionOptions));
 app.use(flash());
@@ -109,4 +112,5 @@ app.use((err, req, res, next) => {
 
 app.listen(8080, () => {
     console.log('Server is running on port 8080');
+
 })
