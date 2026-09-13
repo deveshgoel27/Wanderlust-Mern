@@ -17,4 +17,10 @@
       }, false)
     })
   })()
-  
+
+  // Show server-rendered flash messages as auto-hiding Bootstrap toasts
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.toast').forEach((toastEl) => {
+      new bootstrap.Toast(toastEl).show()
+    })
+  })
